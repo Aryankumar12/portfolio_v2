@@ -1,6 +1,7 @@
 import Button from "../../components/Button";
 import type { HeroData } from "../../types/hero";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Navbar from "../navbar/Navbar";
 
 function Hero() {
   function handleResumeClick(): void {
@@ -18,6 +19,7 @@ function Hero() {
   };
   return (
     <>
+    <Navbar/>
       <div className=" flex bg-amber-200 justify-center items-center flex-col min-h-screen text-center gap-6 px-4">
         <div className="hero_content flex justify-center flex-col items-center  space-y-4">
           <h1 className="text-4xl md:text-6xl  font-bold tracking-tight">
