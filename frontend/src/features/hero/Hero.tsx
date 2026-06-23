@@ -14,7 +14,7 @@ function Hero() {
     name: "Aryan Kumar",
     role: `Software Engineer | Full Stack Developer `,
     introduction:
-      "I am 2026 grad currently will work in Epam System as junior software Engineer",
+      "Computer Science graduate building scalable web applications with React, TypeScript and Node.js.",
   };
   return (
     <>

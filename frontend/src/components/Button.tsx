@@ -13,7 +13,8 @@ interface ButtonProps {
 const Button = (props: ButtonProps) => {
     if(props.href){
        return(
-        <a href={props.href} target={props.target} className={`bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
+        <a href={props.href} target={props.target} className={ ` hover:bg-zinc-800
+transition-all bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
  `}>
             {props.children}
         </a>
@@ -21,7 +22,8 @@ const Button = (props: ButtonProps) => {
     }
    
   return (
-    <button className= {`bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
+    <button className= {` hover:bg-zinc-800
+transition-all bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
  `} onClick={props.onClick}>{props.children}</button>
   )
 }
