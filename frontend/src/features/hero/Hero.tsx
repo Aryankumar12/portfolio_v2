@@ -1,4 +1,5 @@
 import Button from "../../components/Button";
+import type { HeroData } from "../../types/hero";
 function Hero() {
   function handleResumeClick(): void {
     alert("hellow i clieck");
@@ -7,24 +8,22 @@ function Hero() {
     alert("haha");
   }
 
- 
-  const heroData = {
+  const heroData: HeroData = {
     name: "Aryan Kumar",
-    role: "Software Engineer | Full Stack Devloper", 
-    introduction: "I am 2026 grad currently will work in Epam System as junior software Engineer"
-  }
+    role: "Software Engineer | Full Stack Devloper",
+    introduction:
+      "I am 2026 grad currently will work in Epam System as junior software Engineer",
+  };
   return (
     <>
-        <div>
-
+      <div>
         <h1>{heroData.name}</h1>
         <p>{heroData.role}</p>
         <p>{heroData.introduction}</p>
-        </div>
+      </div>
 
       <Button text="Download Resume" onClick={handleResumeClick} />
       <Button text="Contact Me" onClick={handleContactClick} />
-
     </>
   );
 }
