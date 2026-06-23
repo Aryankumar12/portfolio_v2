@@ -16,14 +16,17 @@ function Hero() {
   };
   return (
     <>
-      <div>
+      <div className="hero_content">
         <h1>{heroData.name}</h1>
         <p>{heroData.role}</p>
         <p>{heroData.introduction}</p>
       </div>
 
+        <div className="hero_buttons">
+
       <Button text="Download Resume" onClick={handleResumeClick} />
       <Button text="Contact Me" onClick={handleContactClick} />
+        </div>
     </>
   );
 }
