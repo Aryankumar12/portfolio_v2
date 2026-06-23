@@ -1,14 +1,28 @@
+import {  type ReactNode } from "react";
 
 interface ButtonProps {
-  text: string;
-  onClick: () => void;
+  children: ReactNode;
+  onClick ? : () => void;
+  className?: string;
+  href ?: string;
+  target? : string;
+
+
 }
 
 const Button = (props: ButtonProps) => {
+    if(props.href){
+       return(
+        <a href={props.href} target={props.target} className={`bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
+ `}>
+            {props.children}
+        </a>
+       )
+    }
+   
   return (
-    <div>
-    <button className="bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer" onClick={props.onClick}>{props.text}</button>
-    </div>
+    <button className= {`bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
+ `} onClick={props.onClick}>{props.children}</button>
   )
 }
 
