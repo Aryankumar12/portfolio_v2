@@ -40,11 +40,11 @@ const Navbar = () => {
           {navLinks.map((x) => {
             return (
               <li 
-                key={x}
+                key={x.href}
                 onClick={() => setIsOpen(false)}
                 className="text-zinc-400 hover:text-white text-base font-medium cursor-pointer transition-colors duration-200 w-full text-center py-2"
               >
-                {x}
+                 <a href={x.href}> {x.label}</a>
               </li>
             );
           })}

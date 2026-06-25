@@ -6,9 +6,8 @@ interface ButtonProps {
   className?: string;
   href ?: string;
   target? : string;
-
-
 }
+
 
 const Button = (props: ButtonProps) => {
     if(props.href){
