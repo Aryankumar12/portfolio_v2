@@ -7,6 +7,7 @@ interface Project {
   techStack: string[];
   githubUrl: string;
   liveDemoUrl: string;
+  image:string
 }
 interface Object {
   obj: Project;
@@ -14,6 +15,9 @@ interface Object {
 const ProjectCard = ({ obj }: Object) => {
   return (
     <div className="flex flex-col justify-between text-center border-2 p-6 max-w-md w-full bg-gray-100 rounded-lg shadow-sm h-full">
+
+            <img src={obj.image} alt={obj.image} className="w-full h-56 object-cover border-b-2" />
+
       <h2 className=" font-bold text-2xl my-2">{obj.title}</h2>
       <p className="my-2">{obj.description}</p>
       <div className="flex flex-wrap justify-center gap-2 my-4">
