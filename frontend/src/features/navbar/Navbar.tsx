@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const navLinks = [
-    {label : "Projects", href: "#projects"}, {label : "Skills", href: "#skills"}, {label : "Resume", href: "#resume"} , {label : "Contact", href: "#contact"}
+     {label : "Resume", href: "https://drive.google.com/file/d/13f5-2DPu4LJAoKHuLmIBtuTw8uu0OcNg/view?usp=sharing"} , {label : "LeetCode", href: "#contact"} , {label: "Email" , href: "mailto:aryandot1@gmail.com"}
   ]
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,7 +36,7 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <ul className=" absolute right-0 top-20 w-1/2 flex flex-col items-center gap-2 bg-black text-white py-6 border-t border-zinc-800 z-40 sm:hidden">
+        <ul className="flex flex-col items-center gap-2 bg-black text-white py-6 border-t border-zinc-800 sm:hidden">
           {navLinks.map((x) => {
             return (
               <li 

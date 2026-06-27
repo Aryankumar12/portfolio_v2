@@ -1,14 +1,8 @@
 import Button from "../../components/Button";
 import type { HeroData } from "../../types/hero";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaRegFile } from "react-icons/fa";
 
 function Hero() {
-  function handleResumeClick(): void {
-    alert("hellow i clieck");
-  }
-  function handleContactClick(): void {
-    alert("haha");
-  }
 
   const heroData: HeroData = {
     name: "Aryan Kumar",
@@ -18,8 +12,8 @@ function Hero() {
   };
   return (
     <>
-      <div className=" flex bg-white justify-center items-center flex-col min-h-screen text-center gap-6 px-4">
-        <div className="hero_content flex justify-center flex-col items-center  space-y-4 border-2 rounded-lg p-6 bg-gray-100">
+      <div className="flex bg-white justify-center items-center flex-col py-16 md:py-32 text-center gap-6 px-4">
+        <div className="flex flex-col items-center space-y-4">
           <h1 className="text-4xl md:text-6xl  font-bold tracking-tight">
             {heroData.name}
           </h1>
@@ -29,9 +23,9 @@ function Hero() {
           </p>
         </div>
 
-        <div className="hero_buttons flex gap-6  flex-wrap justify-center">
-          <Button onClick={handleResumeClick}>Resume</Button>
-          <Button onClick={handleContactClick}>Contact</Button>
+        <div className=" flex gap-3 md:gap-6 flex-wrap justify-center">
+          <Button href="https://drive.google.com/file/d/13f5-2DPu4LJAoKHuLmIBtuTw8uu0OcNg/view?usp=sharing" target="_blank"> <FaRegFile/> Resume</Button>
+          <Button  href="#contact" >  <FaEnvelope/> Contact</Button>
           <Button href="https://github.com/Aryankumar12" target="_blank">
             <FaGithub />
             Github
