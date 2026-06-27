@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { type ContactFormData, contactSchema } from "./contactSchema";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 const ContactForm = () => {
   const {
     register,
@@ -12,9 +13,20 @@ const ContactForm = () => {
   } = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) });
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log(data);
+    const response = await fetch(`${API_URL}/api/contact`,{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body:JSON.stringify(data)
+    } )
+    if(!response.ok){
+      throw new Error("ERror with backend");
+      
+    }
     reset();
     toast.success("Form submitted successfully");
+    return response.json();
   };
 
   const onError = ()=>{
@@ -76,7 +88,10 @@ const ContactForm = () => {
       </div>
 
       <div className="flex justify-start mt-2">
-        <Button>{isSubmitting ? "Sending..." : "Submit"}</Button>
+        <Button type="submit"  disabled = {isSubmitting}>{isSubmitting ? ( <span className="flex gap-2 items-center">
+        <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+        Sending...
+      </span>) : "Submit"}</Button>
       </div>
     </form>
   );

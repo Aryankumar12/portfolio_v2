@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './features/navbar/Navbar'
 import Projects from './features/projects/Projects'
 import Contact from './features/contact/Contact'
+import Footer from './features/footer/Footer'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <Hero/>
     <Projects/>
     <Contact/>
+    <Footer/>
     </>
   )
 }
