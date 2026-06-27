@@ -6,6 +6,8 @@ interface ButtonProps {
   className?: string;
   href ?: string;
   target? : string;
+  disabled?: boolean;
+  type?: "submit" | "button" | "reset";
 }
 
 
@@ -21,8 +23,7 @@ transition-all bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${prop
     }
    
   return (
-    <button className= {` hover:bg-zinc-800
-transition-all bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
+    <button disabled = {props.disabled} className= {`bg-black text-white rounded-2xl px-5 py-2.5 cursor-pointer ${props.className || '' } flex items-center gap-2
  `} onClick={props.onClick}>{props.children}</button>
   )
 }
