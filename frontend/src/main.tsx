@@ -4,10 +4,16 @@ import './index.css'
 import App from './App.tsx'
 import { Toaster } from 'sonner'
 import { ThemeProvider } from './context/ThemeContext.tsx'
+import KeepAlive from './services/KeepAlive.tsx'
 
+
+
+KeepAlive();
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
+
+
 
     <Toaster  richColors position='top-center'/>
     <App />
