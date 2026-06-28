@@ -12,7 +12,7 @@ function Hero() {
   };
   return (
     <>
-      <div className="flex bg-white justify-center items-center flex-col py-16 md:py-32 text-center gap-6 px-4">
+      <div className="flex  justify-center items-center flex-col py-16 md:py-32 text-center gap-6 px-4">
         <div className="flex flex-col items-center space-y-4">
           <h1 className="text-4xl md:text-6xl  font-bold tracking-tight">
             {heroData.name}

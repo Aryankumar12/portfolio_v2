@@ -1,2 +1,19 @@
 @import "tailwindcss";
 
+@keyframes gradient-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-border-dark {
+  background: linear-gradient(270deg, #4c3575, #7b5ea7, #c4a35a, #8b6914, #4c3575);
+  background-size: 300% 300%;
+  animation: gradient-rotate 10s ease infinite;
+}
+
+.gradient-border-light {
+  background: linear-gradient(270deg, #7c3aed, #ec4899, #f59e0b, #06b6d4, #7c3aed);
+  background-size: 300% 300%;
+  animation: gradient-rotate 10s ease infinite;
+}
