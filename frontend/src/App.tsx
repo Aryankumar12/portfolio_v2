@@ -5,6 +5,7 @@ import Projects from './features/projects/Projects'
 import Contact from './features/contact/Contact'
 import Footer from './features/footer/Footer'
 import { useTheme } from './context/ThemeContext'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const { isDark } = useTheme();
@@ -46,6 +47,7 @@ function App() {
 
       {/* text color wrapper */}
       <div className={`transition-colors duration-300 ${isDark ? "text-white" : "text-zinc-900"}`}>
+        <Analytics/>
         <Navbar />
         <Hero />
         <Projects />
