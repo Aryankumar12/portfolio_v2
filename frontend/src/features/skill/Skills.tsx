@@ -6,12 +6,12 @@ const Skills = () => {
   const { isDark } = useTheme();
 
 const SkillCard = ({ skill }: { skill: typeof skillData[0] }) => (
-  <div className={`flex flex-col items-center gap-2 mx-3 px-5 py-4 rounded-2xl border transition-all duration-300 hover:scale-110 cursor-default shrink-0 w-24
+  <div className={`flex flex-col items-center gap-2  mx-3 px-5 py-4 rounded-2xl border transition-all duration-300 hover:scale-110 cursor-default shrink-0 w-24
     ${isDark
       ? "bg-zinc-900/80 border-zinc-700/50 text-zinc-300 hover:border-violet-500 hover:bg-zinc-800 shadow-lg shadow-black/30"
       : "bg-white/80 border-zinc-200 text-zinc-700 hover:border-violet-400 hover:bg-zinc-50 shadow-md shadow-zinc-200/50"
     }`}>
-    <i className={`${skill.icon} text-3xl`} />
+    <i className={`${skill.icon} text-4xl sm:text-6xl`} />
     <span className="text-xs font-medium text-center leading-tight">{skill.name}</span>
   </div>
 );
