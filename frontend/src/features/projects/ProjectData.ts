@@ -4,40 +4,56 @@ export interface Project {
   techStack: string[];
   githubUrl: string;
   liveDemoUrl: string;
-  image: string; // ✅ Added the image property type
+  image: string;
 }
 
 export const projectData: Project[] = [
   {
-    title: "DevPulse - Agile Project Management Tool",
-    description: "A real-time Kanban board and project management platform featuring drag-and-drop tasks, collaborative workspaces, and sprint analytics dashboards.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "Socket.io"],
-    githubUrl: "https://github.com/yourusername/devpulse",
-    liveDemoUrl: "https://devpulse-demo.vercel.app",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" // Modern tech abstract/dashboard vibe
+    title: "Remote Interview Platform",
+    description: "A secure interview platform for candidates and interviewers with a built-in code editor for live coding sessions.",
+    techStack: ["React", "Node.js", "WebSocket", "TypeScript"],
+    githubUrl: "https://github.com/Aryankumar12/remote-interview-platform",
+    liveDemoUrl: "https://remote-interview-platform-zeta.vercel.app/",
+    image: "https://res.cloudinary.com/dzjjfucwz/image/upload/v1782734701/project_screenshot5_ybksir.png"
   },
   {
-    title: "CryptoTrackr - Live Web3 Dashboard",
-    description: "A cryptocurrency tracking application that monitors live coin prices, visualizes market trends with interactive charts, and manages a mock user portfolio.",
-    techStack: ["React", "TypeScript", "Chart.js", "Tailwind CSS", "CoinGecko API", "Firebase Authentication"],
-    githubUrl: "https://github.com/yourusername/cryptotrackr",
-    liveDemoUrl: "https://cryptotrackr-live.netlify.app",
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=800&q=80" // Clean crypto/chart vibe
+    title: "ScreenLink - Screen Recording App",
+    description: "A secure screen recording web app with Google Auth, Firestore, and Cloudinary integration enabling instant shareable links and fast video delivery.",
+    techStack: ["React", "Firebase", "Cloudinary", "Google Auth"],
+    githubUrl: "https://github.com/Aryankumar12/Screenlink",
+    liveDemoUrl: "https://screenlink-tau.vercel.app/",
+    image: "https://res.cloudinary.com/dzjjfucwz/image/upload/v1782734702/project_screenshot6_p5psab.png"
   },
   {
-    title: "ShopSphere - Headless E-Commerce Platform",
-    description: "A lightning-fast e-commerce store with a fully integrated Stripe payment gateway, instant search, dynamic cart state management, and a robust admin inventory panel.",
-    techStack: ["Next.js", "TypeScript", "Zustand", "Stripe API", "Sanity CMS", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/shopsphere",
-    liveDemoUrl: "https://shopsphere-store.vercel.app",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" // Web development / store workspace vibe
+    title: "ChatApp - Real Time Messaging",
+    description: "A real-time chat application with secure authentication and instant messaging features.",
+    techStack: ["React", "Node.js", "Socket.io", "Express", "MongoDB"],
+    githubUrl: "https://github.com/Aryankumar12/chatapp_2",
+    liveDemoUrl: "https://chatapp-2-bjly.onrender.com/login",
+    image: "https://res.cloudinary.com/dzjjfucwz/image/upload/v1782734701/project_screenshot3_smrzvq.png"
   },
   {
-    title: "FitFlow - AI Workout Planner",
-    description: "An intelligent fitness app that generates personalized workout routines using AI, tracks daily caloric intake, and visualizes weekly progress metrics.",
-    techStack: ["React Native", "TypeScript", "Node.js", "Express", "MongoDB", "OpenAI API"],
-    githubUrl: "https://github.com/yourusername/fitflow",
-    liveDemoUrl: "https://fitflow-app.com",
-    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" // Minimalist fitness/tracking vibe
-  }
+    title: "Auth System",
+    description: "A secure authentication system with login and registration functionality including JWT and session management.",
+    techStack: ["Node.js", "Express", "JWT", "MongoDB"],
+    githubUrl: "https://github.com/Aryankumar12/auth",
+    liveDemoUrl: "https://auth-qxy8.onrender.com/login",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    title: "Growth Mantra",
+    description: "A platform to track personal growth, goals, and achievements with progress visualization.",
+    techStack: ["React", "Node.js", "MongoDB", "Express"],
+    githubUrl: "https://github.com/Aryankumar12/growth_mantra",
+    liveDemoUrl: "https://growth-mantra-j32c.vercel.app/",
+    image: "https://res.cloudinary.com/dzjjfucwz/image/upload/v1782734702/project_screenshot2_deq9nv.png"
+  },
+  {
+    title: "Portfolio V1",
+    description: "My first personal portfolio website showcasing projects and skills — the foundation that led to this version.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/Aryankumar12/PORTFOLIO.IO",
+    liveDemoUrl: "https://portfolio-two-henna-21.vercel.app/",
+    image: "https://res.cloudinary.com/dzjjfucwz/image/upload/v1782734701/project_screenshot4_atat0x.png"
+  },
 ];
