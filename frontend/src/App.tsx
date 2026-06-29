@@ -5,7 +5,7 @@ import Projects from './features/projects/Projects'
 import Contact from './features/contact/Contact'
 import Footer from './features/footer/Footer'
 import { useTheme } from './context/ThemeContext'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const { isDark } = useTheme();
