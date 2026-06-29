@@ -20,7 +20,6 @@ function Hero() {
           {heroData.name}
         </h1>
         <p className="text-lg md:text-2xl font-medium">{heroData.role}</p>
-        {/* ✅ text color responds to dark mode */}
         <p
           className={`text-sm md:text-lg text-center max-w-xs md:max-w-xl
           ${isDark ? "text-zinc-400" : "text-zinc-600"}`}
@@ -29,8 +28,7 @@ function Hero() {
         </p>
       </div>
 
-      {/* ✅ 2x2 grid on mobile, single row on desktop */}
-      {/* ✅ equal width buttons on mobile */}
+
       <div className="grid grid-cols-2 md:flex gap-3 md:gap-6 w-full max-w-xs md:max-w-none md:w-auto">
         <Button
           href="https://drive.google.com/file/d/13f5-2DPu4LJAoKHuLmIBtuTw8uu0OcNg/view?usp=sharing"
