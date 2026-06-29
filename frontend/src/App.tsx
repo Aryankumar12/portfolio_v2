@@ -6,6 +6,7 @@ import Contact from './features/contact/Contact'
 import Footer from './features/footer/Footer'
 import { useTheme } from './context/ThemeContext'
 import { Analytics } from "@vercel/analytics/react"
+import Skills from './features/skill/Skills'
 
 function App() {
   const { isDark } = useTheme();
@@ -51,6 +52,7 @@ function App() {
         <Navbar />
         <Hero />
         <Projects />
+        <Skills/>
         <Contact />
         <Footer />
       </div>

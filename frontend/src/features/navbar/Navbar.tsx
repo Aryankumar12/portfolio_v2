@@ -9,7 +9,8 @@ const Navbar = () => {
   const navLinks = [
     { label: "Resume", href: "https://drive.google.com/file/d/13f5-2DPu4LJAoKHuLmIBtuTw8uu0OcNg/view?usp=sharing" },
     { label: "LeetCode", href: "#contact" },
-    { label: "Email", href: "mailto:aryandot1@gmail.com" }
+    { label: "Email", href: "mailto:aryandot1@gmail.com" },
+    {label: "Skills", href: "#skills"}
   ];
 
   return (
