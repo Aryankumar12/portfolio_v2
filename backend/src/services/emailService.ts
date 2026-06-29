@@ -1,29 +1,18 @@
-import nodemailer from "nodemailer";
-import SMTPConnection from "nodemailer/lib/smtp-connection";
+import { Resend } from "resend"
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface EmailPayload {
-  name: string;
-  email: string;
-  message: string;
+  name:string,
+  email:string,
+  message:string
+
 }
 
 export const sendEmail = async ({ name, email, message }: EmailPayload) => {
-  console.log("EMAIL_USER:", process.env.EMAIL_USER); 
-  console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "exists" : "undefined"); // debug
-
-  const transporter = nodemailer.createTransport({
-    host:"smtp.gmail.com",
-    port: 587,
-    secure:false,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
-  await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
+  await resend.emails.send({
+    from: "Portfolio <onboarding@resend.dev>",
+    to: "aryandot1@gmail.com",
     replyTo: email,
     subject: `Portfolio Contact — ${name}`,
     html: `
