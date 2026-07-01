@@ -8,7 +8,22 @@ import { useTheme } from './context/ThemeContext'
 import { Analytics } from "@vercel/analytics/react"
 import Skills from './features/skill/Skills'
 
+import KeepAlive from "./services/KeepAlive.tsx";
+import { initializeAnalytics } from "./lib/analytics.ts";
+import { useEffect } from 'react'
+
+
+
 function App() {
+
+
+  useEffect(() => {
+    
+  
+    KeepAlive();
+initializeAnalytics();
+  }, [])
+  
   const { isDark } = useTheme();
 
   return (

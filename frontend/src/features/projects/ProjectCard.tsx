@@ -32,6 +32,9 @@ const ProjectCard = ({ obj }: Object) => {
     src={obj.image}
     alt={obj.title}
     className="w-full h-44 sm:h-56 object-cover rounded-md mb-3 sm:mb-4"
+    loading="lazy"
+    decoding="async"
+    
   />
 
   <h2 className="font-bold text-xl sm:text-2xl my-1 sm:my-2">
